@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "mydata-37645": {
+      "hosting": {
+        "app": [
+          "mydata-37645"
+        ]
+      }
+    }
+  }
+}
