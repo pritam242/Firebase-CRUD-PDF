@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="w3-container" style="overflow-x:auto;">
+    <h2>Player Information</h2>
+    <p>Champions League Team</p>
+    <ion-button color="primary" (click)="onCreatePdf()">Create PDF</ion-button>
+  
+    <table class="w3-table-all" id="myTable">
+      <thead>
+        <tr class="w3-light-grey">
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Address</th>
+          <th>City</th>
+          <th>Country</th>
+          <th>Pin</th>
+          <th>Contact</th>
+          <th>Email</th>
+
+        </tr>
+      </thead>
+      <tr *ngFor = "let detail of details | sort: 'city'">
+        <td>{{detail.firstName}}</td>
+        <td>{{detail.lastName}}</td>
+        <td>{{detail.address}}</td>
+        <td>{{detail.city}}</td>
+        <td>{{detail.country}}</td>
+        <td>{{detail.pin}}</td>
+        <td>{{detail.contact}}</td>
+        <td>{{detail.email}}</td>
+
+
+      </tr>
+    </table>
+  </div>
+  
+</ion-content>
